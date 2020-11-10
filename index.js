@@ -3,8 +3,8 @@ const gql = require('graphql-tag')
 const mongoose = require('mongoose')
 
 const typeDefs = require('./graphql/typeDefs')
-const {MONGODB} =require('./config')
 const resolvers = require('./graphql/resolvers')
+const {MONGODB} =require('./config')
 
 
 
