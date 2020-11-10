@@ -16,7 +16,7 @@ module.exports = {
             if(!valid){
                 throw new UserInputError('Errors',{errors})
             }
-            //TODO Makes sure user doesnt already exist
+            //Makes sure user doesnt already exist
             const user = await User.findOne({username})
             if(user){
                 throw new UserInputError("Username already exists",{
