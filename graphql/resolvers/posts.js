@@ -28,6 +28,10 @@ module.exports = {
         async createPost(_, { body }, context) {
             //context is req forwarded from the index.js 
             const user = checkAuth(context)
+
+            if(args.body.trim()===""){
+                throw new Error('Post body cannot be empty')
+            }
             // console.log(user)
             const newPost = new Post({
                 body,
